@@ -1,0 +1,45 @@
+.kbg-post-body-wrapper {
+    background: #365780;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.kbg-post__heading {
+    /* margin-top: 32px; */
+    color: white;
+}
+
+.kbg-post__heading h1 {
+    background: red;
+    color: white;
+}
+
+@keyframes body-fade-in {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.kbg-post-container {
+
+}
+
+.kbg-post-body {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    min-height: 100vh;
+}
+
+.kbg-post-background {
+    background: white;
+     animation: body-fade-in .3s ease-out .3s;
+    animation-fill-mode: forwards;
+    transform: translateY(100vh);
+}
