@@ -65,7 +65,7 @@
 }
 
 .kbg-grid-item__image {
-    filter: grayscale(100%);
+    filter: grayscale(87%) contrast(120%);
     background-size: cover;
     position: absolute;
     background-blend-mode: color;
@@ -114,23 +114,23 @@
 }
 
 .kbg-grid-item.kbg-grid-item--1 .kbg-grid-item__image {
-    background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgb(5, 54, 63)), url(./assets/book.jpg);
+    background-image: url(assets/book.jpg);
 }
 
 .kbg-grid-item.kbg-grid-item--1:hover .kbg-grid-item__image {
-    background-image: linear-gradient(rgba(160, 214, 223, 0), rgba(5, 54, 63, 0)), url(./assets/book.jpg);
+    background-image: url(./assets/book.jpg);
 }
 
 .kbg-grid-item.kbg-grid-item--2 .kbg-grid-item__image {
-    background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160, 214, 223, 1)), url(./assets/empethy3.jpg);
+    background-image: url(./assets/empethy3.jpg);
 }
 
 .kbg-grid-item.kbg-grid-item--3 .kbg-grid-item__image {
-    background-image: linear-gradient(rgba(160, 223, 172, 0.4), rgb(160, 223, 220)), url(./assets/kids.jpg);
+    background-image: url(./assets/kids.jpg);
 }
 
 .kbg-grid-item.kbg-grid-item--4 .kbg-grid-item__image {
-    background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160, 214, 223, 1)), url(./assets/tracks.jpg);
+    background-image: url(./assets/tracks.jpg);
 }
 
 .kbg-grid-item.kbg-grid-item--4-1 .kbg-grid-item__image {
@@ -138,11 +138,11 @@
 }
 
 .kbg-grid-item.kbg-grid-item--5 .kbg-grid-item__image {
-    background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160, 214, 223, 1)), url(./assets/thilab.png);
+    background-image: url(./assets/thilab.png);
 }
 
 .kbg-grid-item.kbg-grid-item--6 .kbg-grid-item__image {
-    background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160, 214, 223, 1)), url(./assets/wings.jpg);
+    background-image: url(./assets/wings.jpg);
 }
 
 .kbg-grid-item.kbg-grid-item--1.kbg-grid-item--hidden {
