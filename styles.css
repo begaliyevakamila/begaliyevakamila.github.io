@@ -138,7 +138,7 @@
 }
 
 .kbg-grid-item.kbg-grid-item--5 .kbg-grid-item__image {
-    background-image: url(./assets/thilab.png);
+    background-image: url(./assets/thilab.PNG);
 }
 
 .kbg-grid-item.kbg-grid-item--6 .kbg-grid-item__image {
@@ -241,17 +241,6 @@
 .kbg-about__subtitle {
     color: var(--grayish-font);
     /* z-index: 1; */
-}
-
-.about__stripe {
-    width: 150%;
-    left: -30px;
-    top: 10px;
-    height: 121%;
-    transform: rotateZ(11deg);
-    background: var(--gradient-lite);
-    position: absolute;
-    z-index: 0;
 }
 
 .about__heading {
