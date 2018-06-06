@@ -274,6 +274,7 @@
   left: 33px;
   right: 83px;
   border-radius: 5px;
+  white-space: nowrap;
   text-align: center;
   bottom: 23px;
   opacity: 0;
@@ -284,7 +285,8 @@
   display: inline-block;
 border-radius: 3px;
 box-shadow: var(--lite-shadow);
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .kbg-about-section__close {
