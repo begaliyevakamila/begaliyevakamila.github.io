@@ -2,6 +2,7 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
+    background: url('./assets/bg.png');
 }
 
 .kbg-overlay {
@@ -23,12 +24,10 @@
 /* GRID */ 
 
 .grid-wrapper {
-    background: red;
     width: 100%;
     height: 100vh;
     display: block;
     position: relative;
-    background: #365780;
 }
 .kbg-grid-item {
   display: inline-block;
@@ -37,14 +36,15 @@
   transition: all .15s ease-in-out;
   cursor: pointer;
   overflow: hidden;
-  border: 2px solid #365780;
+  border: 10px solid transparent;
   z-index: 1;
 }
 
 .kbg-grid-item__image {
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     background-size: cover;
     position: absolute;
+    background-blend-mode: color;
     top: 0;
     left: 0;
     right: 0;
@@ -89,8 +89,26 @@
 }
 
 .kbg-grid-item.kbg-grid-item--1 {
-  border-left: 4px solid #365780;
+  border-left: 14px solid transparent;
   height: 40%;
+}
+.kbg-grid-item.kbg-grid-item--1 .kbg-grid-item__image {
+  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgb(5, 54, 63)), url(./assets/book.png);
+}
+.kbg-grid-item.kbg-grid-item--2 .kbg-grid-item__image {
+  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/depp.png);
+}
+.kbg-grid-item.kbg-grid-item--3 .kbg-grid-item__image {
+  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/kids.png);
+}
+.kbg-grid-item.kbg-grid-item--4 .kbg-grid-item__image {
+  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/text.png);
+}
+.kbg-grid-item.kbg-grid-item--5 .kbg-grid-item__image {
+  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/thilab.png);
+}
+.kbg-grid-item.kbg-grid-item--6 .kbg-grid-item__image {
+  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/wings.PNG);
 }
 
 
@@ -101,7 +119,7 @@
 
 
 .kbg-grid-item.kbg-grid-item--2 {
-  border-left: 4px solid #365780;
+  border-left: 14px solid transparent;
   top: 40%;
   height: 60%;
 }
@@ -159,16 +177,31 @@
 
 
 /* ABOUT ASIDE */
+.about-wrapper {
+  padding: 50px;
+  padding-bottom: 20px;
+}
+
 .about-photo {
-  height: 300px;
+  height: 280px;
+  margin: auto;
+  width: 100%;
   background: url('./photo.jpg');
   background-size: cover;
+  border-radius: 3px;
   /* box-shadow: inset 0px -43px 53px -9px white; */
 }
 
 .about__description {
-  margin-top: 50px;
+  /* margin-top: 50px; */
+  /* background: white; */
+  height: 400px;
   padding: 0 5px 0 10px;
+  text-align: center;
+}
+
+.kbg-about__subtitle {
+  
 }
 
 .about__stripe {
@@ -177,24 +210,31 @@
   top: 10px;
   height: 121%;
   transform: rotateZ(11deg);
-  background: #365780;
+  /* background: #365780; */
   position: absolute;
 }
 
 .about__heading {
   position: relative;
   padding: 0 5px 0 10px;
-  margin-top: -30px;
+  /* margin-top: -30px; */
+  text-align: center;
 }
 
 .about__heading h1 {
   position: relative;
-  color: white;
 }
 
 
-.about-col {
+.kbg-about-col {
   padding-right: 0;
+  background: white;
+  transition: all .2s ease-in;
+  box-shadow: 5px 1px 18px 0px #36363617;
+}
+
+.kbg-about-col--hidden {
+  transform: translateX(-100%);
 }
 
 .grid-col {
@@ -216,4 +256,82 @@
 
 .kbg-about-section--visible {
   opacity: 1;
+}
+
+/* CARD */
+
+@keyframes card-fade-in {
+  0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+.kbg-card {
+  display: none;
+  margin: auto;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  bottom: 100px;
+  right: 100px;
+  /* box-shadow: 0px 5px 16px 2px #3c3c3c80; */
+  font-size: 0;
+  opacity: 0;
+}
+
+.kbg-card--visible {
+  animation: card-fade-in .2s ease-in .2s;
+  animation-fill-mode: forwards;
+}
+
+.kbg-card__image {
+  margin-top: 20px;
+  display: inline-block;
+  height: calc(100% - 40px);
+  background: black;
+  width: 45%;
+  vertical-align: top;
+  box-shadow: 0px 5px 16px 2px #3c3c3c80;
+}
+
+.kbg-card__content {
+  display: inline-block;
+  height: 100%;
+  background: white;
+  width: 55%;
+  padding: 20px;
+  font-size: 1rem;
+  vertical-align: top;
+  text-align: center;
+  box-shadow: 0px 5px 16px 2px #3c3c3c80;
+}
+
+.kbg-card h2 {
+  text-transform: uppercase;
+
+}
+
+.kbg-card__header-divider {
+  width: 210px;
+  height: 4px;
+  background: #365780;
+  margin: auto;
+   margin-bottom: 15px;
+}
+
+.kbg-card__text {
+  text-align: left;
+}
+
+.kbg-card__close-btn {
+  text-align: right;
+  font-size: 30px;
+  line-height: 1;
+  
 }

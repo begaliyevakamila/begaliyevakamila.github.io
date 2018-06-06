@@ -9,13 +9,15 @@
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
     <div class="kbg-wrapper">
         <div class="row">
-            <div class="col-md-2 about-col">
+            <div id="kbg-about-col" class="col-md-3 kbg-about-col">
                 <div class="about-wrapper">
                     <div class="about-photo">
                     </div>
@@ -23,45 +25,64 @@
                 <div class="about__heading">
                     <div class="about__stripe"></div>
                     <h1>Kamila Begaliyeva</h1>
+                    <p class="kbg-about__subtitle">Paris, France</p>
                 </div>
                 <div class="about__description">
                     <p> ipsum, dolor sit amet consectetur adipisicing elit. Error doloremque fuga, corrupti sapiente totam neque
                         aliquam sint optio?
                     </p>
-                    <a id="kbg-about-btn" class="btn btn-info float-right kbg-about-btn" href="">About</a>
+                    <a id="kbg-about-btn" class="btn btn-info kbg-about-btn" href="">About</a>
                 </div>
             </div>
-            <div class="col-md-10 grid-col">
+            <div class="col-md-9 grid-col">
                 <div class="grid-wrapper">
-                    <div data-href="./book.html" class="kbg-grid-item kbg-grid-item--1">
-                        <div class="kbg-grid-item__image" style="background-image: url('./assets/book.png')">
+                    <div data-href="./book.html" data-card="bookCard" class="kbg-grid-item kbg-grid-item--1">
+                        <div class="kbg-grid-item__image">
                         </div>
                         <div class="kbg-grid-item__overlay">
                             <h3>Le Amour</h3>
                         </div>
                     </div>
                     <div class="kbg-grid-item kbg-grid-item--2">
-                        <div class="kbg-grid-item__image" style="background-image: url('./assets/depp.png')"></div>
+                        <div class="kbg-grid-item__image"></div>
                     </div>
                     <div class="kbg-grid-item kbg-grid-item--3">
-                        <div class="kbg-grid-item__image" style="background-image: url('./assets/kids.png')"></div>
+                        <div class="kbg-grid-item__image"></div>
                     </div>
                     <div class="kbg-grid-item kbg-grid-item--4">
-                        <div class="kbg-grid-item__image" style="background-image: url('./assets/text.png')"></div>
+                        <div class="kbg-grid-item__image"></div>
                     </div>
                     <div class="kbg-grid-item kbg-grid-item--5">
-                        <div class="kbg-grid-item__image" style="background-image: url('./assets/thilab.png')"></div>
+                        <div class="kbg-grid-item__image"></div>
                     </div>
                     <div class="kbg-grid-item kbg-grid-item--6">
-                        <div class="kbg-grid-item__image" style="background-image: url('./assets/wings.png')"></div>
+                        <div class="kbg-grid-item__image"></div>
                     </div>
                     <div id="kbg-about-section" class="kbg-about-section">
                     </div>
-
                 </div>
             </div>
         </div>
         <div id="kbg-overlay" class="kbg-overlay">
+
+        </div>
+        <div id="kbg-book-card" class="kbg-card kbg-book-card">
+            <div class="kbg-card__image">
+
+            </div>
+            <div class="kbg-card__content">
+                <div class="kbg-card__close-btn">
+                    <i class="fa fa-times"></i>
+                </div>
+                <h2>Catalogue «Tickets du monde».</h2>
+                <div class="kbg-card__header-divider"></div>
+                <p class="kbg-card__text">Le catalogue consiste les tickets de différents coins de la terre. Chacun de ces billets collectés par moi,
+                    font partie de mes souvenirs les plus chaleureux . Vous pouvez trouver des tickets de différents endroits
+                    tels que les musées, le cinéma, les expositions, les parcs, les concerts et les différents lieux touristiques!
+                    Dans ce catalogue on peut voir comment les tickets faits dans différents pays, lieux et en différentes
+                    langues.
+                </p>
+            </div>
 
         </div>
     </div>
