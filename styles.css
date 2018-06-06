@@ -58,6 +58,7 @@
     background-size: cover;
     position: absolute;
     background-blend-mode: color;
+    background-position: center;
     top: 0;
     left: 0;
     right: 0;
@@ -111,7 +112,7 @@
   background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/depp.jpg);
 }
 .kbg-grid-item.kbg-grid-item--3 .kbg-grid-item__image {
-  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/kids.png);
+  background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/kids.jpg);
 }
 .kbg-grid-item.kbg-grid-item--4 .kbg-grid-item__image {
   background-image: linear-gradient(rgba(160, 214, 223, 0.4), rgba(160,214,223,1)), url(./assets/text.jpg);

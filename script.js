@@ -62,10 +62,16 @@ const initializeAboutSection = () => {
     elements.aboutBtn.addEventListener('click', e => {
         e.preventDefault();
         hideGridItems();
-        closeCard(() => {
-            elements.aboutSection.style.display = 'block';
+        elements.aboutSection.style.display = 'block';
+        const show = () => {
             elements.aboutSection.classList.add('kbg-about-section--visible');
-        });
+        }
+        if (state.currentCard) {
+            closeCard(show);
+        } else {
+            show();
+        }
+
     })
     elements.aboutSectionCloseBtn.addEventListener('click', e => {
         e.preventDefault();
