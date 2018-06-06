@@ -3,6 +3,7 @@ const elements = {
     pageOverlay: null,
     aboutBtn: null,
     aboutSection: null,
+    aboutSectionCloseBtn: null,
     aboutColumn: null,
     bookCard: null,
 }
@@ -40,29 +41,38 @@ const cacheElements = () => {
     elements.aboutSection = document.getElementById('kbg-about-section');
     elements.bookCard = document.getElementById('kbg-book-card');
     elements.aboutColumn = document.getElementById('kbg-about-col');
+    elements.aboutSectionCloseBtn = document.getElementById('kbg-about-section__close');
+
+}
+
+const initializeAboutSection = () => {
+    elements.aboutBtn.addEventListener('click', e => {
+        e.preventDefault();
+        hideGridItems();
+        elements.aboutSection.style.display = 'block';
+        elements.aboutSection.classList.add('kbg-about-section--visible');
+    })
+    elements.aboutSectionCloseBtn.addEventListener('click', e => {
+        e.preventDefault();
+        elements.aboutSection.addEventListener('transitionend', function tranEnd() {
+            elements.aboutSection.style.display = 'none';
+            showGridItems();
+            elements.aboutSection.removeEventListener('transitionend', tranEnd);
+        });
+        elements.aboutSection.classList.remove('kbg-about-section--visible');
+
+    })
 }
 
 const initialize = () => {
     cacheElements();
-    // elements.gridItems.forEach(item => {
-    //     item.addEventListener('click', (e) => {
-    //         elements.pageOverlay.classList.add('kbg-overlay--showing')
-    //         setTimeout(() => {
-    //             const href = item.attributes['data-href'].value;
-    //             window.location.href = href;
-    //         }, 500);
-    //     })
-    // });
+    initializeAboutSection();
 
     $('.kbg-card__carousel').owlCarousel({
         items: 1
     })
 
-    elements.aboutBtn.addEventListener('click', e => {
-        e.preventDefault();
-        hideGridItems();
-        elements.aboutSection.classList.add('kbg-about-section--visible');
-    })
+
 
     elements.gridItems.forEach(item => {
         item.addEventListener('click', e => openCard(item));
