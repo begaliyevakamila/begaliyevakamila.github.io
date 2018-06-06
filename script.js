@@ -8,6 +8,10 @@ const elements = {
     bookCard: null,
 }
 
+const state = {
+    currentCard: null,
+}
+
 const hideGridItems = () => {
     elements.gridItems.forEach(item => item.classList.add('kbg-grid-item--hidden'));
 }
@@ -15,20 +19,30 @@ const showGridItems = () => {
     elements.gridItems.forEach(item => item.classList.remove('kbg-grid-item--hidden'));
 }
 
+const closeCard = (onHideCb) => {
+    const card = state.currentCard;
+    if (!card) { return; }
+    state.currentCard = null;
+    card.classList.remove('kbg-card--visible');
+    card.classList.add('kbg-card--hidden');
+
+    card.addEventListener('animationend', function hideCard() {
+        card.style.display = 'none';
+        card.classList.remove('kbg-card--hidden');
+        onHideCb && onHideCb();
+        card.removeEventListener('animationend', hideCard);
+    });
+}
+
 const openCard = (item) => {
     hideGridItems();
     const card = elements[item.attributes['data-card'].value];
+    state.currentCard = card;
     const closeBtn = card.querySelector('.kbg-card__close-btn');
     closeBtn.addEventListener('click', function onCloseClick() {
-        card.classList.remove('kbg-card--visible');
-        card.classList.add('kbg-card--hidden');
+        closeCard(showGridItems);
         closeBtn.removeEventListener('click', onCloseClick);
-        card.addEventListener('animationend', function hideCard() {
-            card.style.display = 'none';
-            card.classList.remove('kbg-card--hidden');
-            showGridItems();
-            card.removeEventListener('animationend', hideCard);
-        });
+
     });
     card.style.display = 'block';
     card.classList.add('kbg-card--visible');
@@ -42,15 +56,16 @@ const cacheElements = () => {
     elements.bookCard = document.getElementById('kbg-book-card');
     elements.aboutColumn = document.getElementById('kbg-about-col');
     elements.aboutSectionCloseBtn = document.getElementById('kbg-about-section__close');
-
 }
 
 const initializeAboutSection = () => {
     elements.aboutBtn.addEventListener('click', e => {
         e.preventDefault();
         hideGridItems();
-        elements.aboutSection.style.display = 'block';
-        elements.aboutSection.classList.add('kbg-about-section--visible');
+        closeCard(() => {
+            elements.aboutSection.style.display = 'block';
+            elements.aboutSection.classList.add('kbg-about-section--visible');
+        });
     })
     elements.aboutSectionCloseBtn.addEventListener('click', e => {
         e.preventDefault();
