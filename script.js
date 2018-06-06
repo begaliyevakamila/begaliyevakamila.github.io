@@ -7,6 +7,10 @@ const elements = {
     aboutColumn: null,
     bookCard: null,
     empethyCard: null,
+    thelabCard: null,
+    tracksCard: null,
+    wowCard: null,
+    babyCard: null,
 }
 
 const state = {
@@ -55,8 +59,12 @@ const cacheElements = () => {
     elements.aboutBtn = document.getElementById('kbg-about-btn');
     elements.aboutSection = document.getElementById('kbg-about-section');
     elements.bookCard = document.getElementById('kbg-book-card');
+    elements.thelabCard = document.getElementById('kbg-thelab-card');
     elements.empethyCard = document.getElementById('kbg-empethy-card');
     elements.aboutColumn = document.getElementById('kbg-about-col');
+    elements.tracksCard = document.getElementById('kbg-tracks-card');
+    elements.wowCard = document.getElementById('kbg-wow-card');
+    elements.babyCard = document.getElementById('kbg-baby-card');
     elements.aboutSectionCloseBtn = document.getElementById('kbg-about-section__close');
 }
 
@@ -65,15 +73,16 @@ const initializeAboutSection = () => {
         e.preventDefault();
         hideGridItems();
         elements.aboutSection.style.display = 'block';
-        const show = () => {
-            elements.aboutSection.classList.add('kbg-about-section--visible');
-        }
-        if (state.currentCard) {
-            closeCard(show);
-        } else {
-            show();
-        }
-
+        requestAnimationFrame(() => {
+            const show = () => {
+                elements.aboutSection.classList.add('kbg-about-section--visible');
+            }
+            if (state.currentCard) {
+                closeCard(show);
+            } else {
+                show();
+            }
+        });
     })
     elements.aboutSectionCloseBtn.addEventListener('click', e => {
         e.preventDefault();
