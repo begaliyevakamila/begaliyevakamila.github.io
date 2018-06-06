@@ -13,7 +13,8 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,400i,600,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,400i,600,700,900&amp;subset=latin-ext"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -38,14 +39,14 @@
             </div>
             <div class="col-md-9 grid-col">
                 <div class="grid-wrapper">
-                    <div data-href="./book.html" data-card="bookCard" class="kbg-grid-item kbg-grid-item--1">
+                    <div data-card="bookCard" class="kbg-grid-item kbg-grid-item--1">
                         <div class="kbg-grid-item__image">
                         </div>
                         <div class="kbg-grid-item__overlay">
                             <h3>Le Amour</h3>
                         </div>
                     </div>
-                    <div class="kbg-grid-item kbg-grid-item--2">
+                    <div data-card="empethyCard" class="kbg-grid-item kbg-grid-item--2">
                         <div class="kbg-grid-item__image"></div>
                     </div>
                     <div class="kbg-grid-item kbg-grid-item--3">
@@ -66,12 +67,40 @@
                     </div>
 
                     <!-- Cards -->
+                    <!-- BOOK -->
                     <div id="kbg-book-card" class="kbg-card kbg-book-card">
                         <div class="kbg-card__image">
                             <div class="kbg-card__carousel owl-carousel owl-theme">
                                 <div class="kbg-card__carousel-item" style="background-image: url('./assets/book.jpg')"></div>
                                 <div class="kbg-card__carousel-item" style="background-image: url('./assets/book1.jpg')"></div>
                                 <div class="kbg-card__carousel-item" style="background-image: url('./assets/book2.jpg')"></div>
+                            </div>
+                        </div>
+                        <div class="kbg-card__content">
+                            <div class="kbg-card__close-btn">
+                                <i class="fa fa-times"></i>
+                            </div>
+                            <h2>Catalogue «Tickets du monde».</h2>
+                            <div class="kbg-card__header-divider"></div>
+                            <p class="kbg-card__text">Le catalogue consiste les tickets de différents coins de la terre. Chacun de ces billets collectés
+                                par moi, font partie de mes souvenirs les plus chaleureux . Vous pouvez trouver des tickets
+                                de différents endroits tels que les musées, le cinéma, les expositions, les parcs, les concerts
+                                et les différents lieux touristiques! Dans ce catalogue on peut voir comment les tickets
+                                faits dans différents pays, lieux et en différentes langues.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- EMPETHY -->
+                    <div id="kbg-empethy-card" class="kbg-card kbg-book-card">
+                        <div class="kbg-card__image">
+                            <div class="kbg-card__carousel owl-carousel owl-theme">
+                                <div class="kbg-card__carousel-item" style="background-image: url('./assets/empethy1.jpg')"></div>
+                                <div class="kbg-card__carousel-item" style="background-image: url('./assets/empethy2.png')"></div>
+                                <div class="kbg-card__carousel-item" style="background-image: url('./assets/empethy3.jpg')"></div>
+                                <div class="kbg-card__carousel-item">
+                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/lTPxna9-kwI" frameborder="0" allow="autoplay; encrypted-media"
+                                        allowfullscreen></iframe>
+                                </div>
                             </div>
                         </div>
                         <div class="kbg-card__content">

@@ -6,6 +6,7 @@ const elements = {
     aboutSectionCloseBtn: null,
     aboutColumn: null,
     bookCard: null,
+    empethyCard: null,
 }
 
 const state = {
@@ -54,6 +55,7 @@ const cacheElements = () => {
     elements.aboutBtn = document.getElementById('kbg-about-btn');
     elements.aboutSection = document.getElementById('kbg-about-section');
     elements.bookCard = document.getElementById('kbg-book-card');
+    elements.empethyCard = document.getElementById('kbg-empethy-card');
     elements.aboutColumn = document.getElementById('kbg-about-col');
     elements.aboutSectionCloseBtn = document.getElementById('kbg-about-section__close');
 }
