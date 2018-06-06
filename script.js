@@ -11,6 +11,7 @@ const elements = {
     tracksCard: null,
     wowCard: null,
     babyCard: null,
+    wingsCard: null,
 }
 
 const state = {
@@ -65,6 +66,7 @@ const cacheElements = () => {
     elements.tracksCard = document.getElementById('kbg-tracks-card');
     elements.wowCard = document.getElementById('kbg-wow-card');
     elements.babyCard = document.getElementById('kbg-baby-card');
+    elements.wingsCard = document.getElementById('kbg-wings-card');
     elements.aboutSectionCloseBtn = document.getElementById('kbg-about-section__close');
 }
 
