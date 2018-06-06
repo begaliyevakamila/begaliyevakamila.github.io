@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Begaliyeva Kamila</title>
-    <script src="./script.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="./owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -31,7 +33,7 @@
                     <p> ipsum, dolor sit amet consectetur adipisicing elit. Error doloremque fuga, corrupti sapiente totam neque
                         aliquam sint optio?
                     </p>
-                    <a id="kbg-about-btn" class="btn btn-info kbg-about-btn" href="">About</a>
+                    <a id="kbg-about-btn" class="btn btn-info kbg-btn kbg-about-btn" href="">About</a>
                 </div>
             </div>
             <div class="col-md-9 grid-col">
@@ -60,32 +62,43 @@
                     </div>
                     <div id="kbg-about-section" class="kbg-about-section">
                     </div>
+
+                    <!-- Cards -->
+                    <div id="kbg-book-card" class="kbg-card kbg-book-card">
+                        <div class="kbg-card__image">
+                            <div class="kbg-card__carousel owl-carousel owl-theme">
+                                <div class="kbg-card__carousel-item" style="background-image: url('./assets/book.jpg')"></div>
+                                <div class="kbg-card__carousel-item" style="background-image: url('./assets/book1.jpg')"></div>
+                            </div>
+                        </div>
+                        <div class="kbg-card__content">
+                            <div class="kbg-card__close-btn">
+                                <i class="fa fa-times"></i>
+                            </div>
+                            <h2>Catalogue «Tickets du monde».</h2>
+                            <div class="kbg-card__header-divider"></div>
+                            <p class="kbg-card__text">Le catalogue consiste les tickets de différents coins de la terre. Chacun de ces billets collectés
+                                par moi, font partie de mes souvenirs les plus chaleureux . Vous pouvez trouver des tickets
+                                de différents endroits tels que les musées, le cinéma, les expositions, les parcs, les concerts
+                                et les différents lieux touristiques! Dans ce catalogue on peut voir comment les tickets
+                                faits dans différents pays, lieux et en différentes langues.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
         <div id="kbg-overlay" class="kbg-overlay">
 
         </div>
-        <div id="kbg-book-card" class="kbg-card kbg-book-card">
-            <div class="kbg-card__image">
 
-            </div>
-            <div class="kbg-card__content">
-                <div class="kbg-card__close-btn">
-                    <i class="fa fa-times"></i>
-                </div>
-                <h2>Catalogue «Tickets du monde».</h2>
-                <div class="kbg-card__header-divider"></div>
-                <p class="kbg-card__text">Le catalogue consiste les tickets de différents coins de la terre. Chacun de ces billets collectés par moi,
-                    font partie de mes souvenirs les plus chaleureux . Vous pouvez trouver des tickets de différents endroits
-                    tels que les musées, le cinéma, les expositions, les parcs, les concerts et les différents lieux touristiques!
-                    Dans ce catalogue on peut voir comment les tickets faits dans différents pays, lieux et en différentes
-                    langues.
-                </p>
-            </div>
-
-        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
