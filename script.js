@@ -103,7 +103,8 @@ const initialize = () => {
     initializeAboutSection();
 
     $('.kbg-card__carousel').owlCarousel({
-        items: 1
+        items: 1,
+        video: true,
     })
 
 
